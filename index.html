@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faheem - JavaScript Developer</title>
+
+    <style media="screen">
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-size: 18px;
+      }
+
+      .container {
+        align-items: center;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .content {
+        max-width: 50%;
+      }
+
+      @media screen and (max-width: 650px) and (orientation: portrait) {
+        .content {
+          max-width: 80%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Hi! I'm Faheem</h1>
+        <p>I'm a Full Stack JavaScript Developer</p>
+        <p>This is supposed to be my personal website and blog.</p>
+        <p>
+          But I'm still working on it. You can watch the progress live on
+          <a
+            href="https://www.twitch.tv/itsdrstrange"
+            rel="noreferrer noopener"
+            target="_blank"
+            >my Twitch channel</a
+          >. Or follow me on
+          <a
+            href="https://twitter.com/mfaheemakhtar"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Twitter</a
+          >
+          to get updates.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      if (location.pathname === "/slides") {
+        location.replace("https://slides.com/mfaheemakhtar");
+      }
+    </script>
+  </body>
+</html>
