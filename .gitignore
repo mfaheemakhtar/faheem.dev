@@ -60,5 +60,11 @@ typings/
 # next.js build output
 .next
 
-/dist
-/.firebase
+# gatsby
+.cache
+
+# build
+dist
+public
+
+.firebase
