@@ -17,8 +17,10 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'react/button-has-type': 0,
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'object-curly-newline': 0,
     'sort-keys': 1,
     'sort-vars': 1,
     'import/named': 0,
