@@ -1,78 +1,80 @@
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
-  },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
       options: {
+        name: 'blog',
         path: `${__dirname}/content/blog`,
-        name: `blog`,
       },
+      resolve: 'gatsby-source-filesystem',
     },
     {
-      resolve: `gatsby-source-filesystem`,
       options: {
+        name: 'assets',
         path: `${__dirname}/content/assets`,
-        name: `assets`,
       },
+      resolve: 'gatsby-source-filesystem',
     },
     {
-      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
             },
+            resolve: 'gatsby-remark-images',
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: 'margin-bottom: 1.0725rem',
             },
+            resolve: 'gatsby-remark-responsive-iframe',
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
         ],
       },
+      resolve: 'gatsby-transformer-remark',
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        // trackingId: 'ADD YOUR TRACKING ID HERE',
       },
+      resolve: 'gatsby-plugin-google-analytics',
     },
-    `gatsby-plugin-feed`,
+    'gatsby-plugin-feed',
     {
-      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        background_color: '#ffffff',
+        display: 'minimal-ui',
+        icon: 'content/assets/gatsby-icon.png',
+        name: "Faheem's Blog",
+        short_name: 'faheem.dev',
+        start_url: '/',
+        theme_color: '#663399',
       },
+      resolve: 'gatsby-plugin-manifest',
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: 'src/utils/typography',
       },
+      resolve: 'gatsby-plugin-typography',
     },
+    'gatsby-plugin-sass',
   ],
-}
+
+  siteMetadata: {
+    author: 'Muhammad Faheem Akhtar',
+    description: 'Faheem is a freelance Full Stack JavaScript developer.',
+    siteUrl: 'https://faheem.dev',
+    social: {
+      twitter: 'mfaheemakhtar',
+    },
+    title: 'Faheem - Full Stack JavaScript Developer',
+  },
+};
