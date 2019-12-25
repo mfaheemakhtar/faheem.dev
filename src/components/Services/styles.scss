@@ -1,0 +1,15 @@
+.services {
+  align-items: center;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 4rem;
+
+  &__button {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+  }
+}
