@@ -4,7 +4,7 @@ import './styles.scss';
 
 function Hero() {
   return (
-    <section className="Hero">
+    <section className="hero">
       <div>
         <h1 className="title">Hello, I am Faheem</h1>
         <p>and I am a Full Stack JavaScript developer</p>
