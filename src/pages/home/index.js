@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from '../../components/Hero';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
+import Services from '../../components/Services';
 import './styles.scss';
 
 function Home(props) {
@@ -16,6 +17,7 @@ function Home(props) {
       <SEO title="Faheem | Full Stack JavaScript Developer" />
 
       <Hero />
+      <Services />
     </Layout>
   );
 }
