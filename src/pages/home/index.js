@@ -4,6 +4,7 @@ import Hero from '../../components/Hero';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Services from '../../components/Services';
+import Skills from '../../components/Skills';
 import './styles.scss';
 
 function Home(props) {
@@ -18,6 +19,7 @@ function Home(props) {
 
       <Hero />
       <Services />
+      <Skills />
     </Layout>
   );
 }
