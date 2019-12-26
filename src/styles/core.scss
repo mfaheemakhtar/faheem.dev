@@ -1,0 +1,33 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+// Core
+p {
+  font-size: 22px;
+
+  @include breakpoint('xs') {
+    font-size: 20px;
+  }
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+// Section
+.section {
+  display: flex;
+  padding: 4rem 25%;
+
+  @include breakpoint('lg') {
+    padding: 4rem 15%;
+  }
+
+  @include breakpoint('sm') {
+    padding: 4rem 10%;
+  }
+}
