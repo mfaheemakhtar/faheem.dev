@@ -4,13 +4,21 @@ import './styles.scss';
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero section">
       <div>
         <h1 className="title">Hello, I am Faheem</h1>
-        <p>and I am a Full Stack JavaScript developer</p>
+        <p>
+          I am a freelance JavaScript developer. I create Web Applications for
+          businesses that works, saves time, organizes & automates boring stuff.
+        </p>
 
-        <Button>Contact Me</Button>
-        <Button>Hire Me</Button>
+        <Button href="mailto:hi@faheem.dev" type="link">
+          Contact Me
+        </Button>
+
+        <Button href="mailto:hi@faheem.dev" type="link">
+          Hire Me
+        </Button>
       </div>
     </section>
   );
