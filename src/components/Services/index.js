@@ -8,7 +8,7 @@ import './styles.scss';
 
 function Services() {
   return (
-    <section className="services">
+    <section className="section services">
       <h2 className="h2">I offer these services</h2>
 
       <Cards>
@@ -44,7 +44,9 @@ function Services() {
       </Cards>
 
       <div className="services__button">
-        <Button>I need something which is not listed. Can you help?</Button>
+        <Button href="mailto:hi@faheem.dev" type="link">
+          I need something which is not listed. Can you help?
+        </Button>
       </div>
     </section>
   );
