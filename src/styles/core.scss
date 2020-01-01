@@ -21,13 +21,5 @@ h2 {
 // Section
 .section {
   display: flex;
-  padding: 4rem 25%;
-
-  @include breakpoint('lg') {
-    padding: 4rem 15%;
-  }
-
-  @include breakpoint('sm') {
-    padding: 4rem 10%;
-  }
+  padding: 4rem 10%;
 }
