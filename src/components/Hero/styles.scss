@@ -1,10 +1,20 @@
-@import '../../styles/core';
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
-.hero {
+section.hero {
   align-items: center;
   background-color: $primary-bg;
   height: 100vh;
   justify-content: flex-start;
+  padding: 4rem 25%;
+
+  @include breakpoint('lg') {
+    padding: 4rem 15%;
+  }
+
+  @include breakpoint('sm') {
+    padding: 4rem 10%;
+  }
 
   .title {
     font-size: 60px;
