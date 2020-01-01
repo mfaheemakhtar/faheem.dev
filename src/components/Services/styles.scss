@@ -1,13 +1,21 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .services {
   align-items: center;
   background-color: #f3f3f3;
   flex-direction: column;
-  height: 100vh;
   justify-content: flex-start;
 
   &__button {
-    align-items: flex-end;
-    display: flex;
-    height: 100%;
+    margin-top: 8rem;
+
+    @include breakpoint('md') {
+      margin-top: 4rem;
+    }
+
+    @include breakpoint('sm') {
+      margin-top: 1rem;
+    }
   }
 }
