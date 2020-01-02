@@ -16,7 +16,10 @@ function Skills() {
 
       <FlipMove className="skills__container" easing="ease-in-out">
         {skillSet.map(category => (
-          <div className={`skills__category ${displayMore ? '' : 'w-100'}`}>
+          <div
+            className={`skills__category ${displayMore ? '' : 'w-100'}`}
+            key={category.title}
+          >
             <h3 className="skills__category__title">{category.title}</h3>
             <div className="skills__logos">
               {category.items.map(logo => (
