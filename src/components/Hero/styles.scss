@@ -5,6 +5,7 @@ section.hero {
   align-items: center;
   background-color: $primary-bg;
   justify-content: flex-start;
+  min-height: 100vh;
   padding: 4rem 25%;
 
   @include breakpoint('lg') {
