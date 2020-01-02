@@ -9,6 +9,7 @@ function Button(props) {
     className,
     disabled,
     href,
+    onClick,
     rel,
     target,
     type,
@@ -32,6 +33,7 @@ function Button(props) {
       autoComplete={autocomplete}
       className={`button ${className}`}
       disabled={disabled}
+      onClick={onClick}
       type={type}
     >
       {children}
@@ -44,6 +46,7 @@ Button.defaultProps = {
   className: '',
   disabled: false,
   href: '#',
+  onClick: () => {},
   rel: 'noreferrer noopener',
   target: '_blank',
   type: 'button',
@@ -55,6 +58,7 @@ Button.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   href: PropTypes.string,
+  onClick: PropTypes.func,
   rel: PropTypes.string,
   target: PropTypes.string,
   type: PropTypes.string,
