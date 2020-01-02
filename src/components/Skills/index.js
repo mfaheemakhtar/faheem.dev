@@ -1,50 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import FlipMove from 'react-flip-move';
+import { SKILLS_EXPANDED, SKILLS_PRIMARY } from '../../data/skills';
 import Button from '../Button';
 import Image from '../Image';
 import './styles.scss';
 
-const LOGOS = [
-  {
-    alt: 'NodeJS',
-    fileName: 'nodejs',
-  },
-  {
-    alt: 'ReactJS',
-    fileName: 'reactjs',
-  },
-  {
-    alt: 'JavaScript',
-    fileName: 'javascript',
-  },
-  {
-    alt: 'MongoDB',
-    fileName: 'mongodb',
-  },
-  {
-    alt: 'AWS',
-    fileName: 'aws',
-  },
-];
-
 function Skills() {
-  return (
-    <section className="skills">
-      <h2 className="h2">This is my primary stack</h2>
+  const [displayMore, setDisplayMore] = useState(false);
 
-      <div className="skills__logos">
-        {LOGOS.map(logo => (
-          <Image
-            alt={logo.alt}
-            className="skills__logo"
-            key={logo.fileName}
-            source={`/logos/${logo.fileName}.png`}
-            title={logo.alt}
-          />
+  const skillSet = displayMore ? SKILLS_EXPANDED : SKILLS_PRIMARY;
+
+  return (
+    <section className="section skills">
+      <h2 className="h2">These are my technical skills</h2>
+
+      <FlipMove className="skills__container" easing="ease-in-out">
+        {skillSet.map(category => (
+          <div className={`skills__category ${displayMore ? '' : 'w-100'}`}>
+            <h3 className="skills__category__title">{category.title}</h3>
+            <div className="skills__logos">
+              {category.items.map(logo => (
+                <Image
+                  alt={logo.alt}
+                  caption={logo.caption}
+                  className="skills__logo"
+                  key={logo.fileName}
+                  source={`/logos/${logo.fileName}.png`}
+                  title={logo.alt}
+                />
+              ))}
+            </div>
+          </div>
         ))}
-      </div>
+      </FlipMove>
 
       <div className="services__button">
-        <Button>Just {LOGOS.length} things!? Show me more.</Button>
+        <Button onClick={() => setDisplayMore(!displayMore)}>
+          {displayMore ? 'Show less.' : 'Show me more!'}
+        </Button>
       </div>
     </section>
   );
