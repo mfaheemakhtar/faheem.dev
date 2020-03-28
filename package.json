@@ -1,0 +1,10 @@
+{
+  "name": "faheem.dev",
+  "version": "1.0.0",
+  "description": "Personal website of Faheem",
+  "main": "index.js",
+  "repository": "github.com:mfaheemakhtar/faheem.dev.git",
+  "author": "Muhammad Faheem Akhtar <muhammadfaheemakhtar.pk@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
